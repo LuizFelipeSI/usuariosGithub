@@ -109,7 +109,7 @@ function App() {
                   return (
                     <div>
                       <p key={repo.name}>{repo.name}</p>
-                      <p><a href={repo.url}>{repo.url}</a></p>
+                      <p><a href={repo.html_url}>{repo.html_url}</a></p>
                     </div>
                   )
                 })
@@ -119,7 +119,7 @@ function App() {
               seguidores.length > 0 && (
                 seguidores.map(repo => {
                   return (
-                    <p><a href={repo.ur}>{repo.url}</a></p>
+                    <p><a href={repo.html_url}>{repo.html_url}</a></p>
                   )
                 })
               )
