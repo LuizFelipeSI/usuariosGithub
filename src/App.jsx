@@ -15,6 +15,8 @@ function App() {
     })
 
   function mudaUsuario(usuarioBuscado) {
+    setSeguidores([])
+    setRepositorios([])
     const usuarioFiltrado = usuarios.filter(usuario => usuario.login == usuarioBuscado)
     if (usuarioFiltrado.length == 0) {
       setErro(`Usuário '${usuarioBuscado}' não encontrado`)
@@ -30,6 +32,8 @@ function App() {
   }
 
   function repos(event) {
+    setSeguidores([])
+    setRepositorios([])
     event.preventDefault()
 
     if (repositorios.length > 0) {
@@ -43,6 +47,8 @@ function App() {
   }
 
   function seguid(event) {
+    setSeguidores([])
+    setRepositorios([])
     event.preventDefault()
 
     if (seguidores.length > 0) {
